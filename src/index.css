@@ -1,0 +1,275 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 150 20% 96%;
+    --foreground: 0 0% 7%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 7%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
+    --primary: 162 72% 14%;
+    --primary-foreground: 150 30% 97%;
+    --secondary: 150 16% 93%;
+    --secondary-foreground: 162 60% 16%;
+    --muted: 150 14% 92%;
+    --muted-foreground: 160 9% 36%;
+    --accent: 23 90% 54%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 48%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 150 14% 87%;
+    --input: 150 14% 87%;
+    --ring: 23 90% 54%;
+    --chart-1: 162 72% 24%;
+    --chart-2: 23 90% 54%;
+    --chart-3: 150 30% 60%;
+    --chart-4: 40 80% 55%;
+    --chart-5: 190 60% 45%;
+    --radius: 0.6rem;
+    --font-heading: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+    --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 162 40% 7%;
+    --foreground: 150 20% 96%;
+    --card: 162 36% 10%;
+    --card-foreground: 150 20% 96%;
+    --popover: 162 36% 10%;
+    --popover-foreground: 150 20% 96%;
+    --primary: 150 40% 88%;
+    --primary-foreground: 162 60% 12%;
+    --secondary: 162 22% 16%;
+    --secondary-foreground: 150 20% 96%;
+    --muted: 162 22% 16%;
+    --muted-foreground: 150 10% 68%;
+    --accent: 23 90% 54%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 162 20% 20%;
+    --input: 162 20% 20%;
+    --ring: 23 90% 54%;
+    --chart-1: 150 40% 60%;
+    --chart-2: 23 90% 54%;
+    --chart-3: 162 30% 45%;
+    --chart-4: 40 80% 60%;
+    --chart-5: 190 60% 50%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply font-heading;
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+  }
+}
+
+@layer components {
+  .vvm-shell {
+    @apply mx-auto w-full max-w-[1240px] px-5 sm:px-8;
+  }
+
+  .vvm-label {
+    @apply font-heading text-[11px] font-semibold uppercase tracking-[0.22em];
+  }
+
+  .vvm-card {
+    @apply rounded-2xl border border-border bg-card;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .text-outline {
+    -webkit-text-stroke: 1.5px hsl(var(--primary-foreground));
+    color: transparent;
+  }
+
+  .marquee-track {
+    animation: vvm-marquee 30s linear infinite;
+  }
+
+  .grain {
+    background-image: radial-gradient(hsl(var(--primary) / 0.16) 1px, transparent 1px);
+    background-size: 18px 18px;
+  }
+}
+
+@keyframes vvm-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes vvm-pulse-ring {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.9;
+  }
+  70% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+@keyframes vvm-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@layer components {
+  .vvm-logo-float {
+    animation: vvm-logo-bob 4.6s ease-in-out infinite;
+  }
+
+  .vvm-logo {
+    border-radius: 26%;
+    transition: transform 0.35s ease;
+  }
+
+  .vvm-logo-float:hover .vvm-logo {
+    transform: scale(1.06) rotate(-3deg);
+  }
+
+  .vvm-logo-glow {
+    position: absolute;
+    inset: -42%;
+    z-index: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    background: radial-gradient(
+      circle at 50% 55%,
+      hsl(var(--accent) / 0.55),
+      hsl(var(--accent) / 0) 68%
+    );
+    animation: vvm-logo-glow 3.4s ease-in-out infinite;
+  }
+
+  .vvm-logo-shine {
+    position: absolute;
+    top: -60%;
+    left: -140%;
+    z-index: 20;
+    height: 220%;
+    width: 65%;
+    pointer-events: none;
+    transform: rotate(20deg);
+    background: linear-gradient(
+      90deg,
+      hsl(0 0% 100% / 0),
+      hsl(0 0% 100% / 0.65),
+      hsl(0 0% 100% / 0)
+    );
+    animation: vvm-logo-shine 6.5s ease-in-out infinite;
+  }
+}
+
+@keyframes vvm-logo-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6%);
+  }
+}
+
+@keyframes vvm-logo-glow {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.84);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.06);
+  }
+}
+
+@keyframes vvm-logo-shine {
+  0%,
+  58% {
+    left: -140%;
+  }
+  86%,
+  100% {
+    left: 140%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vvm-logo-float,
+  .vvm-logo-glow,
+  .vvm-logo-shine {
+    animation: none;
+  }
+
+  .vvm-logo-shine {
+    opacity: 0;
+  }
+}
