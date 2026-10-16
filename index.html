@@ -1,426 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ValueVille Mall – Premium within reach</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDAgMTQwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IlZhbHVlVmlsbGUgTWFsbCBpY29uIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMTI4MDNmIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDczYTFjIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9ImhyIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZmY4YTNkIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZjI2YTFiIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjE0MCIgaGVpZ2h0PSIxNDAiIHJ4PSIzNiIgZmlsbD0idXJsKCNiZykiLz48cGF0aCBkPSJNMTAgMjAgUTcwIC0yIDEzMCAxNCIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utb3BhY2l0eT0iLjE4IiBzdHJva2Utd2lkdGg9IjEwIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNMjYgMzggaDE1IGwxMiA1MiBoNDggbDEwIC0zOCBINDYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSI3IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48cGF0aCBkPSJNNzkgODIgQzU4IDY2IDYyIDQ4IDc0IDUwIEM3OCA1MSA3OSA1NSA3OSA1NSBDNzkgNTUgODAgNTEgODQgNTAgQzk2IDQ4IDEwMCA2NiA3OSA4MiBaIiBmaWxsPSJ1cmwoI2hyKSIvPjxjaXJjbGUgY3g9IjU5IiBjeT0iMTA2IiByPSI3IiBmaWxsPSIjZmZmIi8+PGNpcmNsZSBjeD0iOTgiIGN5PSIxMDYiIHI9IjciIGZpbGw9IiNmZmYiLz48L3N2Zz4=">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com/3.4.17"></script>
-<script>tailwind.config={theme:{extend:{fontFamily:{sans:['"Plus Jakarta Sans"','system-ui','sans-serif']},colors:{g:{50:'#f1f8f3',100:'#dcefe2',600:'#12803f',700:'#0e6a34',800:'#0b5228',900:'#073a1c'},o:{500:'#f26a1b',600:'#d95a10'}}}}}</script>
-<style>
-:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-html{scroll-behavior:smooth;scroll-padding-top:84px}body{background:#fafaf7;color:#16241b}
-.scan{background:repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0 2px,transparent 2px 4px)}
-@keyframes pulse2{0%{box-shadow:0 0 0 0 rgba(242,106,27,.6)}100%{box-shadow:0 0 0 14px rgba(242,106,27,0)}}
-.ping{animation:pulse2 1.6s infinite}
-@keyframes pop{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}
-.pop{animation:pop .22s ease-out}
-.glass{background:rgba(255,255,255,.55);backdrop-filter:blur(16px) saturate(160%);-webkit-backdrop-filter:blur(16px) saturate(160%);border:1px solid rgba(255,255,255,.75);box-shadow:0 8px 32px rgba(7,58,28,.08),inset 0 1px 0 rgba(255,255,255,.9)}
-.glass-d{background:rgba(255,255,255,.1);backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px) saturate(150%);border:1px solid rgba(255,255,255,.2);box-shadow:0 8px 32px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.28)}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
-@keyframes drift{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(40px,-30px) scale(1.15)}}
-@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
-@keyframes shine{to{background-position:200% center}}
-.fl{animation:float 6s ease-in-out infinite}.dr{animation:drift 14s ease-in-out infinite}
-.hero-in>*{animation:up .9s cubic-bezier(.2,.7,.2,1) .5s both}.hero-in>:nth-child(2){animation-delay:.75s}.hero-in>:nth-child(3){animation-delay:1s}
-h2.rv{transition-delay:.3s!important}
-.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}.rv.in{opacity:1;transform:none}
-.shine{background:linear-gradient(90deg,#f26a1b,#ffb27a,#f26a1b);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 4s linear infinite}
-.card{transition:transform .3s ease,box-shadow .3s ease}.card:hover{transform:translateY(-6px);box-shadow:0 18px 44px rgba(7,58,28,.16),inset 0 1px 0 rgba(255,255,255,.9)}
-.cin{animation:up .55s cubic-bezier(.2,.7,.2,1) both}
-button{transition:transform .15s ease,background-color .2s ease}button:active{transform:scale(.96)}
-#hdr{transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .4s ease;will-change:transform}
-#hin{height:4rem;transition:height .4s cubic-bezier(.2,.7,.2,1)}
-#hdr.sm #hin{height:3rem}#hdr.sm{box-shadow:0 10px 30px rgba(7,58,28,.12),inset 0 1px 0 rgba(255,255,255,.9)}
-#hdr.hide{transform:translateY(-105%)}
-@keyframes fade{from{opacity:0}to{opacity:1}}
-#home,#dash{animation:fade .5s ease both}
-@keyframes fT{0%,100%{translate:0 0}50%{translate:0 -10px}}
-@keyframes fR{0%,100%{translate:0 0;rotate:0deg}50%{translate:0 -13px;rotate:1.6deg}}
-@keyframes fX{0%,100%{translate:0 0}33%{translate:7px -9px}66%{translate:-7px -4px}}
-@keyframes fS{0%,100%{translate:0 0}50%{translate:0 -3px}}
-.f1{animation:fT var(--fd,5s) ease-in-out var(--fo,0s) infinite}
-.f2{animation:fR var(--fd,6.5s) ease-in-out var(--fo,0s) infinite}
-.f3{animation:fX var(--fd,7s) ease-in-out var(--fo,0s) infinite}
-.fs{animation:fS 3.2s ease-in-out infinite}
-.cin.f1{animation:up .55s cubic-bezier(.2,.7,.2,1) var(--cd,0ms) both,fT var(--fd,5s) ease-in-out calc(.7s + var(--fo,0s)) infinite}
-.cin.f2{animation:up .55s cubic-bezier(.2,.7,.2,1) var(--cd,0ms) both,fR var(--fd,6.5s) ease-in-out calc(.7s + var(--fo,0s)) infinite}
-.cin.f3{animation:up .55s cubic-bezier(.2,.7,.2,1) var(--cd,0ms) both,fX var(--fd,7s) ease-in-out calc(.7s + var(--fo,0s)) infinite}
-@keyframes rise{0%{translate:0 0;rotate:0deg;opacity:0}10%{opacity:.5}50%{translate:26px -60vh;rotate:20deg}90%{opacity:.5}100%{translate:-20px -118vh;rotate:-15deg;opacity:0}}
-@keyframes spring{0%{opacity:0;transform:translateY(70px) scale(.8)}60%{opacity:1;transform:translateY(-8px) scale(1.03)}100%{opacity:1;transform:none}}
-@keyframes springOut{to{opacity:0;transform:translateY(30px) scale(.9)}}
-@keyframes fadeOut{to{opacity:0}}
-#modal{animation:fade .25s ease both}
-#modal #mbox{animation:spring .55s cubic-bezier(.2,.9,.3,1) both}
-#modal.closing{animation:fadeOut .22s ease forwards}
-#modal.closing #mbox{animation:springOut .22s ease forwards}
-.stag>*{animation:up .5s cubic-bezier(.2,.7,.2,1) backwards}
-.stag>:nth-child(2){animation-delay:.08s}.stag>:nth-child(3){animation-delay:.16s}.stag>:nth-child(4){animation-delay:.24s}.stag>:nth-child(5){animation-delay:.32s}.stag>:nth-child(6){animation-delay:.4s}
-@keyframes ckIn{0%{opacity:0;transform:translateY(130px) scale(.7) rotate(-4deg)}60%{opacity:1;transform:translateY(-14px) scale(1.04) rotate(1deg)}100%{opacity:1;transform:none}}
-@keyframes ckOut{to{opacity:0;transform:translateY(90px) scale(.8)}}
-#cky{display:none}#cky.show{display:block;animation:ckIn .9s cubic-bezier(.2,.9,.3,1) both}#cky.hid{display:block;animation:ckOut .35s ease forwards}
-@keyframes wIn{0%{opacity:0;transform:translateX(120%) scale(.8)}60%{opacity:1;transform:translateX(-10px) scale(1.04)}100%{opacity:1;transform:none}}
-@keyframes wOut{to{opacity:0;transform:translateX(120%)}}
-@keyframes burst{0%{opacity:1;transform:translate(0,0) scale(.4)}100%{opacity:0;transform:translate(var(--x),var(--y)) scale(1.2) rotate(var(--r))}}
-@keyframes draw{to{stroke-dashoffset:0}}
-#wel{display:none}#wel.show{display:block;animation:wIn .7s cubic-bezier(.2,.9,.3,1) both}#wel.hid{display:block;animation:wOut .4s ease forwards}
-#terms{animation:fade .5s ease both}
+ <head>
+  <script>
+   (function () {
+  var proto = XMLHttpRequest.prototype;
+  var open = proto.open, setRequestHeader = proto.setRequestHeader, send = proto.send;
+  var TOKEN_KEY = 'base44_access_token';
+  var storedTokenHeader = function () {
+    try { return 'Bearer ' + localStorage.getItem(TOKEN_KEY); } catch (e) { return null; }
+  };
+  var forgetStoredToken = function () {
+    try { localStorage.removeItem(TOKEN_KEY); localStorage.removeItem('token'); } catch (e) {}
+  };
 
-a{transition:color .25s ease,opacity .25s ease}
-input,select{transition:box-shadow .25s ease,border-color .25s ease}
-.glass,.glass-d{transition:background-color .3s ease,box-shadow .3s ease}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
-</style>
-</head>
-<body class="font-sans antialiased">
-<div id="bgf" class="pointer-events-none fixed inset-0 -z-10 overflow-hidden"></div>
-<div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden"><div class="dr absolute -left-20 top-1/3 h-96 w-96 rounded-full bg-g-600/25 blur-3xl"></div><div class="dr absolute right-0 top-2/3 h-96 w-96 rounded-full bg-o-500/25 blur-3xl" style="animation-delay:-6s"></div></div>
+  proto.open = function (method, url) {
+    this.__b44IsAuthCheck = /\/entities\/User\/me(\?|$)/.test(url);
+    return open.apply(this, arguments);
+  };
 
-<header id="hdr" class="glass sticky top-0 z-40">
-  <div id="hin" class="mx-auto flex max-w-6xl items-center justify-between px-4">
-    <a href="#top" onclick="show('home')" class="flex items-center gap-2 text-lg font-extrabold tracking-tight text-g-800">
-      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDAgMTQwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IlZhbHVlVmlsbGUgTWFsbCBpY29uIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMTI4MDNmIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDczYTFjIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9ImhyIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZmY4YTNkIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZjI2YTFiIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjE0MCIgaGVpZ2h0PSIxNDAiIHJ4PSIzNiIgZmlsbD0idXJsKCNiZykiLz48cGF0aCBkPSJNMTAgMjAgUTcwIC0yIDEzMCAxNCIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utb3BhY2l0eT0iLjE4IiBzdHJva2Utd2lkdGg9IjEwIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNMjYgMzggaDE1IGwxMiA1MiBoNDggbDEwIC0zOCBINDYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSI3IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48cGF0aCBkPSJNNzkgODIgQzU4IDY2IDYyIDQ4IDc0IDUwIEM3OCA1MSA3OSA1NSA3OSA1NSBDNzkgNTUgODAgNTEgODQgNTAgQzk2IDQ4IDEwMCA2NiA3OSA4MiBaIiBmaWxsPSJ1cmwoI2hyKSIvPjxjaXJjbGUgY3g9IjU5IiBjeT0iMTA2IiByPSI3IiBmaWxsPSIjZmZmIi8+PGNpcmNsZSBjeD0iOTgiIGN5PSIxMDYiIHI9IjciIGZpbGw9IiNmZmYiLz48L3N2Zz4=" alt="ValueVille Mall logo" class="h-9 w-9 rounded-[10px] shadow-md" width="36" height="36">ValueVille<span class="text-o-500">Mall</span>
-    </a>
-    <nav class="hidden gap-6 text-sm font-medium text-g-900/70 md:flex">
-      <a class="hover:text-g-800" href="#shop" onclick="show('home')">Shop</a>
-      <a class="hover:text-g-800" href="#plans" onclick="show('home')">Installment plans</a>
-      <a class="hover:text-g-800" href="#lab" onclick="show('home')">Live testing</a>
-      <a class="hover:text-g-800" href="#track" onclick="show('home')">Track order</a>
-      <a class="hover:text-g-800" href="#" onclick="event.preventDefault();show('terms')">Terms</a>
-    </nav>
-    <div class="flex items-center gap-2" id="authbar"></div>
-  </div>
-</header>
+  proto.setRequestHeader = function (name, value) {
+    if (this.__b44IsAuthCheck && name.toLowerCase() === 'authorization' && value === storedTokenHeader()) {
+      this.__b44SentToken = value;
+    }
+    return setRequestHeader.call(this, name, value);
+  };
 
-<main id="top">
-<div id="home">
-<!-- Hero -->
-<section class="relative overflow-hidden bg-g-900 text-white">
-  <div class="dr absolute -right-24 -top-24 h-96 w-96 rounded-full bg-g-600/50 blur-3xl"></div>
-  <div class="dr absolute -bottom-32 left-10 h-80 w-80 rounded-full bg-o-500/30 blur-3xl" style="animation-delay:-5s"></div>
-  <div class="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 md:grid-cols-2 md:py-24">
-    <div>
-      <h1 class="text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl">Premium, within reach.<br><span class="shine">Pay your way.</span></h1>
-      <p class="mt-5 max-w-md text-lg text-white/75">Pay in full, or spread it from 3 to 24 months. You get the product after your final payment, tested on video before it ships.</p>
-      <div class="mt-8 flex flex-wrap gap-3">
-        <a href="#shop" class="rounded-xl bg-o-500 px-6 py-3 font-semibold shadow-lg shadow-o-500/30 transition hover:bg-o-600">Start shopping</a>
-        <a href="#lab" class="rounded-xl border border-white/25 px-6 py-3 font-semibold transition hover:bg-white/10">Watch a product test</a>
-      </div>
-    </div>
-    <div class="glass-d fl rounded-3xl p-5">
-      <p class="text-sm text-white/70">Estimate your plan</p>
-      <div class="mt-3 grid grid-cols-2 gap-3">
-        <label class="text-xs text-white/70">Item price (₦)<input id="hp" type="number" value="850000" class="mt-1 w-full rounded-lg border-0 bg-white px-3 py-2.5 text-base font-semibold text-g-900 outline-none focus:ring-2 focus:ring-o-500"></label>
-        <label class="text-xs text-white/70">Months<select id="hm" class="mt-1 w-full rounded-lg border-0 bg-white px-3 py-2.5 text-base font-semibold text-g-900 outline-none focus:ring-2 focus:ring-o-500"></select></label>
-      </div>
-      <div class="mt-4 rounded-2xl bg-white p-4 text-g-900">
-        <p class="text-xs text-g-900/60">You pay each month</p>
-        <p id="hr" class="text-3xl font-extrabold tracking-tight text-g-800"></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Trust -->
-<section id="trust" class="mx-auto grid max-w-6xl gap-4 px-4 py-8 sm:grid-cols-2 lg:grid-cols-4">
-  <div class="rounded-2xl bg-white p-4 ring-1 ring-black/5"><p class="font-bold text-g-800">Tested on video first</p><p class="text-sm text-g-900/60">See your item pass its checks before dispatch.</p></div>
-  <div class="rounded-2xl bg-white p-4 ring-1 ring-black/5"><p class="font-bold text-g-800">Flexible plans</p><p class="text-sm text-g-900/60">Plans are matched to the item's price.</p></div>
-  <div class="rounded-2xl bg-white p-4 ring-1 ring-black/5"><p class="font-bold text-g-800">Disbursed after payment</p><p class="text-sm text-g-900/60">Your dashboard confirms when you're paid up.</p></div>
-  <div class="rounded-2xl bg-white p-4 ring-1 ring-black/5"><p class="font-bold text-g-800">Live driver tracking</p><p class="text-sm text-g-900/60">Watch your delivery move on the map.</p></div>
-</section>
-
-<!-- Shop -->
-<section id="shop" class="mx-auto max-w-6xl px-4 py-10">
-  <div class="flex flex-wrap items-end justify-between gap-3">
-    <h2 class="text-3xl font-extrabold tracking-tight text-g-900">Shop</h2>
-    <div id="chips" class="flex flex-wrap gap-2"></div>
-  </div>
-  <div id="grid" class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"></div>
-</section>
-
-<!-- Plans -->
-<section id="plans" class="mx-auto max-w-6xl px-4 py-10">
-  <h2 class="text-3xl font-extrabold tracking-tight text-g-900">Installment plans that fit the item</h2>
-  <p class="mt-2 max-w-xl text-g-900/65">A television shouldn't take two years to pay. A car shouldn't take two months. Each category gets its own range.</p>
-  <div id="planlist" class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3"></div>
-  <div id="rules" class="mt-6 flex flex-wrap items-center gap-2"></div>
-</section>
-
-<!-- Lab -->
-<section id="lab" class="relative overflow-hidden bg-g-900 py-16 text-white">
-  <div class="dr absolute right-10 top-10 h-72 w-72 rounded-full bg-o-500/30 blur-3xl"></div><div class="dr absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-g-600/40 blur-3xl" style="animation-delay:-7s"></div>
-  <div class="relative mx-auto grid max-w-6xl gap-8 px-4 lg:grid-cols-5">
-    <div class="lg:col-span-2">
-      <h2 class="text-3xl font-extrabold tracking-tight">Live testing lab</h2>
-      <p class="mt-3 text-white/70">Before anything leaves our warehouse, our technicians test it on camera. You watch every check, so nothing arrives faulty.</p>
-      <div id="labtabs" class="mt-6 flex flex-wrap gap-2"></div>
-      <ul id="steps" class="mt-5 space-y-2"></ul>
-    </div>
-    <div class="lg:col-span-3">
-      <div class="scan relative aspect-video overflow-hidden rounded-3xl bg-black ring-1 ring-white/10">
-        <div class="absolute inset-0 grid place-items-center bg-gradient-to-br from-g-800 to-black"><span id="labemoji" class="text-8xl opacity-90"></span></div>
-        <div class="glass-d absolute left-4 top-4 flex items-center gap-2 rounded-full px-3 py-1 text-xs"><span id="rec" class="h-2 w-2 rounded-full bg-red-500"></span><span id="labstat">Paused</span></div>
-        <div id="stamp" class="pop absolute inset-0 hidden place-items-center bg-black/55"><span class="rotate-[-6deg] rounded-xl border-4 border-green-400 px-6 py-2 text-4xl font-extrabold text-green-400">PASSED</span></div>
-        <div class="glass-d absolute inset-x-3 bottom-3 flex items-center gap-3 rounded-2xl p-3">
-          <button id="playbtn" class="rounded-full bg-o-500 px-5 py-2 text-sm font-semibold hover:bg-o-600">Play test</button>
-          <div class="h-1.5 flex-1 rounded-full bg-white/20"><div id="bar" class="h-full w-0 rounded-full bg-o-500 transition-all duration-700"></div></div>
-        </div>
-      </div>
-      <p class="mt-2 text-xs text-white/50">Demo feed. Replace with your real test recordings or live camera stream.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Track -->
-<section id="track" class="mx-auto max-w-6xl px-4 py-14">
-  <h2 class="text-3xl font-extrabold tracking-tight text-g-900">Track your delivery</h2>
-  <p class="mt-2 text-g-900/65">Once an order is disbursed, you see exactly where your driver is. This is a live demo.</p>
-  <div class="mt-6 grid gap-4 lg:grid-cols-3">
-    <div class="overflow-hidden rounded-3xl bg-g-50 ring-1 ring-black/5 lg:col-span-2">
-      <svg viewBox="0 0 600 300" class="w-full">
-        <defs><pattern id="gr" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="#dcefe2" stroke-width="1"/></pattern></defs>
-        <rect width="600" height="300" fill="url(#gr)"/>
-        <path id="route" d="M50 250 C140 80 240 280 330 150 S500 60 550 50" fill="none" stroke="#12803f" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 10"/>
-        <circle cx="50" cy="250" r="9" fill="#073a1c"/><text x="66" y="268" font-size="13" font-weight="700" fill="#073a1c">Warehouse</text>
-        <circle cx="550" cy="50" r="9" fill="#f26a1b"/><text x="470" y="82" font-size="13" font-weight="700" fill="#f26a1b">You</text>
-        <g id="drv"><circle r="16" fill="#f26a1b" opacity=".25"><animate attributeName="r" values="12;28;12" dur="2s" repeatCount="indefinite"/></circle><circle r="9" fill="#f26a1b" stroke="#fff" stroke-width="3"/></g>
-      </svg>
-    </div>
-    <div class="glass rounded-3xl p-6">
-      <p class="text-sm text-g-900/60">Driver: Emeka O.</p>
-      <p id="eta" class="mt-1 text-3xl font-extrabold text-g-800"></p>
-      <p id="dist" class="text-sm text-g-900/60"></p>
-      <ol class="mt-5 space-y-3 text-sm" id="tl"></ol>
-    </div>
-  </div>
-</section>
-</div>
-
-<!-- Dashboard -->
-<div id="dash" class="hidden mx-auto max-w-6xl px-4 py-10"></div>
-
-<!-- Terms -->
-<div id="terms" class="hidden mx-auto max-w-6xl px-4 py-10"></div>
-</main>
-
-<footer class="border-t border-black/5 py-10 text-sm text-g-900/60">
-  <div class="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 text-center">
-    <img id="flogo" alt="ValueVille Mall logo" class="fs h-11 w-11 rounded-xl shadow-md">
-    <p class="fs font-bold text-g-800">Cart it, Love it.</p>
-    <div class="flex flex-wrap justify-center gap-x-5 gap-y-2 font-medium">
-      <button onclick="show('terms')" class="hover:text-g-900">Terms &amp; Conditions</button>
-      <button onclick="show('terms','t11')" class="hover:text-g-900">Privacy Policy</button>
-      <button onclick="show('terms','t4')" class="hover:text-g-900">No Refund Policy</button>
-      <button onclick="show('terms','t15')" class="hover:text-g-900">Contact</button>
-      <button onclick="cookieOpen()" class="hover:text-g-900">Cookie settings</button>
-    </div>
-    <p>valuevillemall@gmail.com</p>
-    <p>© 2026 ValueVille Mall. Bringing premium within reach.</p>
-  </div>
-</footer>
-
-<!-- Cookie pop-up -->
-<div id="cky" class="fixed bottom-4 left-4 right-4 z-[55] sm:right-auto sm:w-[390px]">
-  <div class="f1 glass relative rounded-3xl p-5" style="background:rgba(255,255,255,.92)">
-    <div class="flex items-start gap-3">
-      <div class="relative shrink-0">
-        <span class="f2 grid h-12 w-12 place-items-center rounded-2xl bg-o-500/15 text-3xl">🍪</span>
-        <i class="f3 absolute -right-1 -top-1 h-2 w-2 rounded-full bg-o-500" style="--fd:3s"></i>
-        <i class="f1 absolute -bottom-1 left-0 h-1.5 w-1.5 rounded-full bg-g-600" style="--fd:4s;--fo:-1s"></i>
-      </div>
-      <div>
-        <p class="font-extrabold text-g-900">We use cookies</p>
-        <p class="mt-1 text-sm leading-snug text-g-900/65">We collect your name, phone, address and email to process orders, and use cookies to keep you signed in. We never sell your data. <a href="#" onclick="event.preventDefault();cookie('seen');show('terms','t11')" class="font-semibold text-g-800 underline">Privacy policy</a></p>
-      </div>
-    </div>
-    <div class="mt-4 flex gap-2">
-      <button onclick="cookie('all')" class="flex-1 rounded-xl bg-g-800 py-2.5 text-sm font-semibold text-white hover:bg-g-900">Accept all</button>
-      <button onclick="cookie('essential')" class="flex-1 rounded-xl bg-white py-2.5 text-sm font-semibold text-g-900 ring-1 ring-black/10 hover:bg-g-50">Essential only</button>
-    </div>
-  </div>
-</div>
-
-<!-- Welcome pop-up -->
-<div id="wel" class="fixed right-4 top-20 z-[70]"></div>
-
-<!-- Modal -->
-<div id="modal" class="fixed inset-0 z-50 hidden items-end bg-black/50 p-0 backdrop-blur-sm sm:items-center sm:justify-center sm:p-4" onclick="if(event.target===this)closeM()">
-  <div id="mbox" class="glass pop max-h-[92vh] w-full overflow-auto rounded-t-3xl p-6 sm:max-w-md sm:rounded-3xl" style="background:rgba(255,255,255,.82)"></div>
-</div>
-<div id="toast" class="pop fixed bottom-6 left-1/2 z-[60] hidden -translate-x-1/2 rounded-full bg-g-900 px-5 py-3 text-sm font-medium text-white shadow-xl"></div>
-
-<script>
-const N=n=>'₦'+Math.round(n).toLocaleString('en-NG');
-const $=id=>document.getElementById(id);
-const CATS={Electronics:[3,6],Phones:[3,6],Computers:[3,6,12],Appliances:[3,6,12],Furniture:[3,6,12],Vehicles:[12,18,24]};
-const RANGE={Electronics:'3–6 months',Phones:'3–6 months',Computers:'3–12 months',Appliances:'3–12 months',Furniture:'3–12 months',Vehicles:'12–24 months'};
-const P=[
- {id:1,n:'Samsung 55" Smart TV',c:'Electronics',p:850000,e:'📺',plans:[3,6]},
- {id:2,n:'LG 32" LED TV',c:'Electronics',p:320000,e:'📺',plans:[3,6]},
- {id:3,n:'iPhone 14 Pro Max',c:'Phones',p:1650000,e:'📱',plans:[3,6]},
- {id:4,n:'HP Pavilion 15.6" i7',c:'Computers',p:780000,e:'💻',plans:[3,6,12]},
- {id:5,n:'LG 10.5kg Washing Machine',c:'Appliances',p:460000,e:'🧺',plans:[3,6,12]},
- {id:6,n:'5-Seater Luxury Sofa',c:'Furniture',p:620000,e:'🛋️',plans:[3,6,12]},
- {id:7,n:'Toyota Camry 2019',c:'Vehicles',p:14500000,e:'🚗',plans:[12,18,24]},
- {id:8,n:'Honda Accord 2018',c:'Vehicles',p:11800000,e:'🚙',plans:[12,18,24]}];
-let S={user:null,orders:[]},cat='All';
-try{S=JSON.parse(localStorage.getItem('sm')||'')||S}catch(e){}
-const save=()=>{try{localStorage.setItem('sm',JSON.stringify(S))}catch(e){}};
-const toast=t=>{const x=$('toast');x.textContent=t;x.style.display='block';clearTimeout(toast.t);toast.t=setTimeout(()=>x.style.display='none',2600)};
-const openM=h=>{clearTimeout(openM.t);const m=$('modal'),b=$('mbox');m.classList.remove('closing');b.innerHTML=h;m.style.display='flex';b.style.animation='none';void b.offsetWidth;b.style.animation=''};
-const closeM=()=>{const m=$('modal');if(m.style.display!=='flex')return;m.classList.add('closing');openM.t=setTimeout(()=>{m.style.display='none';m.classList.remove('closing')},230)};
-
-/* Header */
-function bar(){$('authbar').innerHTML=S.user?`<button onclick="show('dash')" class="rounded-xl bg-g-800 px-4 py-2 text-sm font-semibold text-white hover:bg-g-900">Dashboard</button><button onclick="out()" class="px-2 text-sm text-g-900/60 hover:text-g-900">Log out</button>`:`<button onclick="auth('in')" class="px-3 py-2 text-sm font-medium text-g-900/70 hover:text-g-900">Log in</button><button onclick="auth('up')" class="rounded-xl bg-o-500 px-4 py-2 text-sm font-semibold text-white hover:bg-o-600">Sign up</button>`}
-function show(v,a){$('home').style.display=v==='home'?'':'none';$('dash').style.display=v==='dash'?'block':'none';$('terms').style.display=v==='terms'?'block':'none';if(v==='dash')dash();scrollTo(0,0);if(a)setTimeout(()=>{const e=$(a);e&&e.scrollIntoView({behavior:'smooth',block:'start'})},80)}
-function openTerms(a){closeM();show('terms',a)}
-function out(){S.user=null;save();bar();show('home')}
-
-/* Auth */
-const LOGO=document.querySelector('header img').src;
-const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const IN='w-full rounded-xl border border-black/10 px-4 py-3 outline-none focus:ring-2 focus:ring-g-600';
-function auth(m,after){const up=m==='up';openM(`<img src="${LOGO}" alt="" class="f3 mb-3 h-14 w-14 rounded-2xl shadow-lg"><h3 class="text-2xl font-extrabold text-g-900">${up?'Create your account':'Welcome back'}</h3><p class="mt-1 text-sm text-g-900/60">${up?'Track payments and deliveries in one dashboard.':'Log in to see your orders.'}</p>
-<div class="stag mt-5 space-y-3">${up?`<input id="an" placeholder="Full name" class="${IN}">`:''}
-<input id="ae" type="email" placeholder="Email address" class="${IN}">
-<input id="ap" type="password" placeholder="Password" class="${IN}">
-${up?`<label class="flex items-start gap-2 text-xs text-g-900/70"><input id="at" type="checkbox" class="mt-0.5 h-4 w-4 accent-[#0b5228]"><span>I am 18 or older and I agree to the <a href="#" onclick="event.preventDefault();openTerms()" class="font-semibold text-g-800 underline">Terms &amp; Conditions</a>, including the No Refund and Installment policies.</span></label>`:''}</div>
-<p id="aerr" class="mt-2 text-sm text-red-600"></p>
-<button onclick="doAuth('${m}',${after||0})" class="mt-4 w-full rounded-xl bg-g-800 py-3 font-semibold text-white hover:bg-g-900">${up?'Create account':'Log in'}</button>
-<button onclick="auth('${up?'in':'up'}',${after||0})" class="mt-3 w-full text-sm text-g-900/60">${up?'Have an account? Log in':'New here? Create an account'}</button>`)}
-function doAuth(m,after){const e=$('ae').value.trim(),p=$('ap').value,n=m==='up'?$('an').value.trim():'';
- if(!/\S+@\S+\.\S+/.test(e)||p.length<6||(m==='up'&&!n)){$('aerr').textContent='Enter a valid email, your name, and a password of 6+ characters.';return}
- if(m==='up'&&!$('at').checked){$('aerr').textContent='Please confirm you are 18+ and accept the Terms & Conditions.';return}
- S.user={name:n||e.split('@')[0],email:e};save();bar();closeM();welcome(S.user.name);after?buy(after):0}
-
-/* Hero calc */
-function calc(){const p=+$('hp').value||0,m=+$('hm').value;$('hr').textContent=N(p/m)}
-$('hm').innerHTML=[3,6,12,18,24].map(m=>`<option value="${m}" ${m===6?'selected':''}>${m} month${m>1?'s':''}</option>`).join('');
-$('hp').oninput=$('hm').onchange=calc;calc();
-
-/* Shop */
-function shop(){$('chips').innerHTML=['All',...Object.keys(CATS)].map(c=>`<button onclick="cat='${c}';shop()" class="rounded-full px-4 py-1.5 text-sm font-medium transition ${c===cat?'bg-g-800 text-white':'bg-white text-g-900/70 ring-1 ring-black/10 hover:bg-g-50'}">${c}</button>`).join('');
- $('grid').innerHTML=P.filter(x=>cat==='All'||x.c===cat).map((x,i)=>`<div class="glass card cin group flex flex-col rounded-3xl p-4" style="--cd:${i*70}ms">
- <div class="grid h-36 place-items-center rounded-2xl bg-g-50 text-6xl transition group-hover:scale-[1.02]">${x.e}</div>
- <p class="mt-3 text-xs text-g-900/50">${x.c}</p><p class="font-bold leading-snug text-g-900">${x.n}</p>
- <p class="mt-1 text-xl font-extrabold text-g-800">${N(x.p)}</p>
- <p class="text-sm text-g-900/60">or ${N(x.p/x.plans[x.plans.length-1])}/mo for ${x.plans[x.plans.length-1]} mo</p>
- <button onclick="buy(${x.id})" class="mt-4 rounded-xl bg-o-500 py-2.5 text-sm font-semibold text-white hover:bg-o-600">Choose payment plan</button></div>`).join('');floaty()}
-$('planlist').innerHTML=Object.keys(CATS).map(c=>`<div class="glass rv rounded-2xl p-5"><p class="font-bold text-g-900">${c}</p><p class="text-2xl font-extrabold text-o-500">${RANGE[c]}</p><p class="mt-1 text-sm text-g-900/60">Options: ${CATS[c].join(', ')} months, or pay in full.</p></div>`).join('');
-
-/* Checkout */
-const MIN=50000;let sel=0,pk=false;
-function buy(id){if(!S.user)return auth('up',id);const x=P.find(a=>a.id===id);sel=0;pk=false;
- const act=S.orders.filter(o=>!o.full&&o.paid<o.months).length;
- const plans=x.p>=MIN&&act<2?x.plans:[];
- const note=x.p<MIN?'Items under ₦50,000 are available on full payment only.':act>=2?'You already have 2 items on installment. Complete one to add another.':'';
- openM(`<h3 class="text-xl font-extrabold text-g-900">${x.n}</h3><p class="text-g-800 font-bold">${N(x.p)}</p>
- ${note?`<p class="mt-3 rounded-xl bg-orange-50 px-3 py-2 text-xs font-medium text-orange-800">${note}</p>`:''}
- <p class="mt-4 text-sm font-semibold">How do you want to pay?</p>
- <div class="stag mt-2 grid gap-2" id="opts">${[0,...plans].map(m=>`<button data-m="${m}" onclick="pick(${id},${m})" class="flex items-center justify-between rounded-xl border border-black/10 px-4 py-3 text-left transition hover:border-g-600"><span class="font-semibold">${m?m+' months':'Pay in full'}</span><span class="text-sm text-g-900/60">${m?N(x.p/m)+'/mo':N(x.p)}</span></button>`).join('')}</div>
- <div class="mt-4 rounded-2xl bg-g-50 p-3 text-xs leading-relaxed text-g-900/75"><p class="font-bold text-g-800">Before you confirm</p><ul class="mt-1 list-disc space-y-0.5 pl-4">
- <li>All payments are final and non-refundable. Issues get a replacement or exchange of equal value within 48 hours, subject to approval.</li>
- <li>Pay 100% now to lock today's price. On installment, your price is not locked until fully paid.</li>
- ${plans.length?'<li>Installments: first payment within 72 hours, a ₦1,000 fee for each missed payment date, and default after 2 missed months.</li><li>Your item is released after 100% payment.</li>':''}</ul></div>
- <label class="mt-3 flex items-start gap-2 text-xs text-g-900/75"><input id="agr" type="checkbox" onchange="upd()" class="mt-0.5 h-4 w-4 accent-[#0b5228]"><span>I have seen my product on the live testing page and I accept the <a href="#" onclick="event.preventDefault();openTerms('t4')" class="font-semibold text-g-800 underline">No Refund Policy</a>.</span></label>
- <button id="go" onclick="place(${id})" class="mt-4 w-full rounded-xl bg-g-800 py-3 font-semibold text-white opacity-40" disabled>Confirm order</button>`)}
-function pick(id,m){sel=m;pk=true;document.querySelectorAll('#opts button').forEach(b=>{b.classList.remove('ring-2','ring-g-600','bg-g-50');if(+b.dataset.m===m)b.classList.add('ring-2','ring-g-600','bg-g-50')});upd()}
-function upd(){const ok=pk&&$('agr').checked,g=$('go');g.disabled=!ok;g.style.opacity=ok?1:.4}
-function place(id){const x=P.find(a=>a.id===id);S.orders.unshift({id:Date.now(),pid:id,n:x.n,e:x.e,total:x.p,months:sel||1,paid:sel?0:1,full:!sel,disb:!sel});save();closeM();toast(sel?'Order placed. Make your first payment within 72 hours.':'Payment received. Your item is being prepared.');show('dash')}
-
-/* Dashboard */
-function dash(){const o=S.orders,paid=o.reduce((a,b)=>a+b.total*b.paid/b.months,0),due=o.reduce((a,b)=>a+b.total*(b.months-b.paid)/b.months,0);
- $('dash').innerHTML=`<h2 class="text-3xl font-extrabold tracking-tight text-g-900">Hi ${S.user.name}</h2><p class="text-g-900/60">${S.user.email}</p>
- <div class="mt-6 grid gap-4 sm:grid-cols-3"><div class="rounded-2xl bg-g-800 p-5 text-white"><p class="text-sm text-white/70">Total paid</p><p class="text-2xl font-extrabold">${N(paid)}</p></div><div class="rounded-2xl bg-white p-5 ring-1 ring-black/5"><p class="text-sm text-g-900/60">Balance remaining</p><p class="text-2xl font-extrabold text-o-500">${N(due)}</p></div><div class="rounded-2xl bg-white p-5 ring-1 ring-black/5"><p class="text-sm text-g-900/60">Orders</p><p class="text-2xl font-extrabold">${o.length}</p></div></div>
- <p class="mt-6 rounded-2xl bg-orange-50 px-4 py-3 text-sm text-orange-900">Missed a payment date? A ₦1,000 fee applies. Missing 2 months in a row is a default. <a href="#" onclick="event.preventDefault();show('terms','t5')" class="font-semibold underline">See installment terms</a></p>
- <div class="mt-4 space-y-4">${o.length?o.map(r=>{const done=r.paid>=r.months,pc=r.paid/r.months*100;return `<div class="glass cin rounded-3xl p-5"><div class="flex flex-wrap items-center gap-4"><div class="grid h-14 w-14 place-items-center rounded-2xl bg-g-50 text-3xl">${r.e}</div>
- <div class="min-w-0 flex-1"><p class="font-bold text-g-900">${r.n}</p><p class="text-sm text-g-900/60">${r.full?'Paid in full':r.paid+' of '+r.months+' installments · '+N(r.total/r.months)+'/mo'+(r.paid===0?' · first payment due within 72 hrs':'')}</p></div>
- ${done?'<span class="rounded-full bg-green-100 px-3 py-1 text-xs font-semibold text-green-800">Payment completed</span>':'<span class="rounded-full bg-orange-100 px-3 py-1 text-xs font-semibold text-orange-800">In progress</span>'}</div>
- <div class="mt-4 h-2 rounded-full bg-g-100"><div class="h-full rounded-full bg-g-600 transition-all duration-500" style="width:${pc}%"></div></div>
- <div class="mt-4 flex flex-wrap items-center justify-between gap-2"><p class="text-sm text-g-900/70">${done?(r.disb?'Disbursed. Your item is on its way.':'Payment confirmed. We are disbursing your item.'):'Your item is disbursed after the final installment.'}</p>
- ${done?`<button onclick="show('home');location.hash='track'" class="rounded-xl bg-g-800 px-4 py-2 text-sm font-semibold text-white">Track delivery</button>`:`<button onclick="payInst(${r.id})" class="rounded-xl bg-o-500 px-4 py-2 text-sm font-semibold text-white hover:bg-o-600">Pay ${N(r.total/r.months)}</button>`}</div></div>`}).join(''):`<div class="rounded-3xl border border-dashed border-black/15 p-10 text-center"><p class="font-bold">No orders yet</p><p class="text-sm text-g-900/60">Pick something from the shop and choose how to pay.</p><button onclick="show('home');location.hash='shop'" class="mt-4 rounded-xl bg-o-500 px-5 py-2.5 text-sm font-semibold text-white">Browse products</button></div>`}</div>`;floaty()}
-function payInst(id){const r=S.orders.find(a=>a.id===id);r.paid++;if(r.paid>=r.months){setTimeout(()=>{r.disb=true;save();if($('dash').style.display==='block')dash()},2500);toast('Final payment received. Payment completed.')}else toast('Installment received')
- save();dash()}
-
-/* Live test lab */
-const LAB={'Television':{e:'📺',s:['Power on and boot','Panel dead-pixel scan','Colour and brightness','Speaker and audio','HDMI and USB ports','Remote and Wi-Fi']},'Laptop':{e:'💻',s:['Power and battery health','Screen and keyboard','Storage speed test','Camera and mic','Ports and Wi-Fi','Heat stress test']},'Phone':{e:'📱',s:['Power and charging','Touch screen response','Cameras','Speakers and mic','Network and SIM','Battery drain test']}};
-let lt='Television',li=-1,lp=null;
-function lab(){$('labtabs').innerHTML=Object.keys(LAB).map(k=>`<button onclick="lt='${k}';stop(1);lab()" class="rounded-full px-4 py-1.5 text-sm font-medium ${k===lt?'bg-o-500':'bg-white/10 hover:bg-white/20'}">${k}</button>`).join('');
- $('labemoji').textContent=LAB[lt].e;$('steps').innerHTML=LAB[lt].s.map((t,i)=>`<li class="flex items-center gap-3 rounded-xl px-3 py-2 text-sm transition ${i<li?'glass-d text-white':i===li?'bg-o-500/20 text-white ring-1 ring-o-500':'text-white/45'}"><span class="grid h-5 w-5 place-items-center rounded-full text-[11px] ${i<li?'bg-green-400 text-g-900':'bg-white/15'}">${i<li?'✓':''}</span>${t}</li>`).join('');
- $('bar').style.width=Math.max(0,li)/LAB[lt].s.length*100+'%';$('stamp').style.display=li>=LAB[lt].s.length?'grid':'none'}
-function stop(reset){clearInterval(lp);lp=null;if(reset)li=-1;$('playbtn').textContent=li>=LAB[lt].s.length?'Replay':'Play test';$('labstat').textContent='Paused';$('rec').className='h-2 w-2 rounded-full bg-red-500'}
-$('playbtn').onclick=()=>{if(lp)return stop();if(li>=LAB[lt].s.length)li=-1;$('playbtn').textContent='Pause';$('labstat').textContent='Testing live';$('rec').className='ping h-2 w-2 rounded-full bg-red-500';
- const tick=()=>{li++;lab();if(li>=LAB[lt].s.length)stop()};tick();lp=setInterval(tick,1400)};
-
-/* Tracking */
-let tp=0.05;const rt=$('route'),L=rt.getTotalLength();
-function drive(){tp=Math.min(.97,tp+.0006);const pt=rt.getPointAtLength(tp*L);$('drv').setAttribute('transform',`translate(${pt.x},${pt.y})`);
- const km=((1-tp)*18).toFixed(1),min=Math.ceil((1-tp)*45);$('eta').textContent='Arriving in '+min+' min';$('dist').textContent=km+' km away';
- $('tl').innerHTML=[['Payment completed',1],['Tested and packed',1],['Driver on the way',1],['Delivered',tp>=.97]].map(([t,d])=>`<li class="flex items-center gap-3"><span class="h-3 w-3 rounded-full ${d?'bg-g-600':'bg-g-100'}"></span><span class="${d?'font-semibold text-g-900':'text-g-900/45'}">${t}</span></li>`).join('');
- if(tp<.97)requestAnimationFrame(drive)}
-drive();
-
-bar();shop();lab();
-let ly=0,tk=0;addEventListener('scroll',()=>{if(tk)return;tk=1;requestAnimationFrame(()=>{const y=scrollY,h=$('hdr');h.classList.toggle('sm',y>30);h.classList.toggle('hide',y>ly&&y>140);ly=y;tk=0})},{passive:true});
-document.querySelectorAll('#trust>div').forEach(e=>e.className='glass rounded-2xl p-4');
-document.querySelector('section.bg-g-900 .grid>div').classList.add('hero-in');
-
-/* Terms & Conditions */
-const TERMS=[
-{id:'t1',n:'1',t:'About Us',x:[['','','ValueVille Mall is a retail store in Nigeria. We deal in groceries, fashion, beauty, household items, electronics, real estate services and general merchandise.'],['','Our motto','Cart it, Love it.'],['','Email','valuevillemall@gmail.com']]},
-{id:'t2',n:'2',t:'Acceptance of Terms',x:[['','','By using our website, placing an order, or making payment, you confirm you are at least 18 years old and agree to these terms.']]},
-{id:'t3',n:'3',t:'Products, Pricing and Inflation Clause',x:[['3.1','','Product images are for illustration; the actual product may slightly vary.'],['3.2','','All prices are listed in Nigerian Naira (₦) and are subject to change with prior notice due to exchange rate, fuel cost and market inflation.'],['3.3','','If you pay 100% at once, your price is locked.'],['3.4','','If you are on installment (3–24 months), your price is not locked until 100% payment. If inflation causes our cost to rise by more than 10%, we will notify you to pay the price difference. If you cannot, your money will not be refunded, but will be converted to store credit to pick other goods of the same value.']]},
-{id:'t4',n:'4',t:'No Refund of Money Policy',hot:1,x:[['4.1','','All payments made to ValueVille Mall are FINAL and NON-REFUNDABLE.'],['4.2','','We do not give cash refunds, bank transfers or reversals for any reason after payment, whether full payment or installment deposit.'],['4.3','','In case of any issue, we will only offer REPLACEMENT or EXCHANGE with another product of equal value, subject to management approval and within 48 hours.'],['4.4','','By paying, you agree you have inspected / seen pictures of your product through the live testing page, understood the product and accepted this No Refund Policy.']]},
-{id:'t5',n:'5',t:'Installment Payment Plan (3 Months to 24 Months)',hot:1,x:[['5.1','Minimum order','For installment, the minimum order is ₦50,000 worth of product. Orders below ₦50,000 are available on full payment only.'],['5.2','Initial deposit','You are required to make your first payment within 72 hours after registration on our website. Beyond 72 hours attracts a penalty fee of 2% of the product worth.'],['5.3','Tenure','You can choose between 3, 6, 12, 18 or 24 months, depending on the duration attributed to the selected items.'],['5.4','Number of products','On an installment payment plan, you are required to add not more than two items to your shopping cart.'],['5.5','Product release','The product will be released after 100% payment is made. Termination of the signed contract will lead to 30% forfeiture in the value of the item.'],['5.6','Late payment','If you miss a payment on the agreed date, a penalty fee of ₦1,000 will be paid.'],['5.7','Default','If you fail to pay for 2 consecutive months, all money paid will be forfeited as rental usage and administrative charges. No refund.'],['5.8','','All installment payments are non-refundable. You cannot cancel and ask for your money back.'],['5.9','','You must sign our digital installment agreement form.']]},
-{id:'t6',n:'6',t:'Orders and Payment',x:[['6.1','','Placing an order does not guarantee availability. We will confirm via WhatsApp, call or email.'],['6.2','Payment methods','Bank transfer and online payment (Paystack / Flutterwave, where applicable).']]},
-{id:'t7',n:'7',t:'Returns and Refunds of Product(s)',x:[['7.1','','You can return items within 24 hours if they are damaged, have factory issues, are the wrong item or are expired, with the receipt and properly sealed.'],['7.2','','Perishable goods, underwear, beauty products (opened) and sale items cannot be returned.'],['7.3','','Refunds will be processed within 3–7 working days after inspection.'],['7.4','','To initiate a return, contact us on WhatsApp with your order number and picture and video evidence.']]},
-{id:'t8',n:'8',t:'Delivery and Shipping',x:[['8.1','','Deliveries within Uyo take 24–48 hours. Outside Uyo: 2–5 working days.'],['8.2','','Delivery fee is not included in the price unless stated.'],['8.3','','The customer must re-inspect the product at the point of delivery. Complaints after 24 hours may not be accepted.'],['8.4','','We are not responsible for delays caused by logistics, bad roads, weather or civil unrest.']]},
-{id:'t9',n:'9',t:'User Conduct',x:[['','','You agree not to use our website for fraud, false claims, or to post abusive content in reviews.']]},
-{id:'t10',n:'10',t:'Intellectual Property',x:[['','','All logos, images, content and designs, including “Cart it, Love it”, belong to ValueVille Mall. Do not copy without written permission.']]},
-{id:'t11',n:'11',t:'Privacy Policy',x:[['','','We collect your name, phone, address and email to process orders. We do not sell your data. We may use your contacts for order updates and promotions. You can opt out anytime.']]},
-{id:'t12',n:'12',t:'Limitation of Liability',x:[['','','We are not liable for any indirect loss, delay or damage caused by third-party delivery services or misuse of products after purchase.']]},
-{id:'t13',n:'13',t:'Governing Law',x:[['','','These terms are governed by the laws of the Federal Republic of Nigeria. Any dispute shall be resolved in Uyo, Akwa Ibom State.']]},
-{id:'t14',n:'14',t:'Changes to Terms',x:[['','','We may update these terms anytime. Continued use of our websites means you accept the new terms.']]},
-{id:'t15',n:'15',t:'Contact Us',x:[['','','For questions, complaints or returns:'],['','Email','valuevillemall@gmail.com'],['','Facebook','Message us on our Facebook page'],['','WhatsApp','Chat with us on WhatsApp']]}];
-const goT=id=>{const e=$(id);e&&e.scrollIntoView({behavior:'smooth',block:'start'})};
-(function(){
- const toc=TERMS.map(s=>`<button onclick="goT('${s.id}')" class="block w-full rounded-lg px-3 py-1.5 text-left text-sm text-g-900/70 transition hover:bg-g-50 hover:text-g-900">${s.n}. ${s.t}</button>`).join('');
- const sec=TERMS.map((s,i)=>`<section id="${s.id}" class="rv glass scroll-mt-24 rounded-3xl p-6" ${s.hot?'style="border-left:4px solid #f26a1b"':''}>
-  <div class="flex items-center gap-3"><span class="f2 grid h-10 w-10 shrink-0 place-items-center rounded-xl ${s.hot?'bg-o-500':'bg-g-800'} font-extrabold text-white" style="--fd:${(4.5+(i%4)*.9).toFixed(1)}s;--fo:-${i%5}s">${s.n}</span><h2 class="text-xl font-extrabold tracking-tight text-g-900">${s.t}</h2></div>
-  <div class="mt-3 space-y-3 text-[15px] leading-relaxed text-g-900/80">${s.x.map(([n,l,t])=>`<p class="flex gap-3">${n?`<span class="w-9 shrink-0 font-bold text-o-500">${n}</span>`:''}<span>${l?`<b class="text-g-900">${l}:</b> `:''}${t}</span></p>`).join('')}</div></section>`).join('');
- $('terms').innerHTML=`<button onclick="show('home')" class="mb-4 rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-g-800 ring-1 ring-black/10 hover:bg-g-50">← Back to shop</button>
- <div class="f1 glass rounded-3xl p-6 sm:p-8"><p class="text-sm font-semibold uppercase tracking-wider text-o-500">Terms and Conditions</p><h1 class="mt-1 text-3xl font-extrabold tracking-tight text-g-900 sm:text-4xl">Terms and Conditions for ValueVille Mall</h1><p class="mt-1 text-sm text-g-900/60">Last updated: October 2026</p><p class="mt-4 text-g-900/80">Welcome to ValueVille Mall! By accessing and using our website, our social media store, or by placing orders, you agree to these Terms and Conditions. Please read carefully.</p></div>
- <div class="mt-6 grid gap-6 lg:grid-cols-4"><nav class="hidden lg:block"><div class="glass sticky top-24 rounded-2xl p-3">${toc}</div></nav><div class="space-y-4 lg:col-span-3">${sec}<p class="f1 rounded-2xl bg-g-800 p-5 text-center font-bold text-white">By shopping with us, you agree to Cart it, and you will Love it!</p></div></div>`;
+  proto.send = function () {
+    this.addEventListener('loadend', function () {
+      var rejectedTokenStillStored = this.status === 401 && this.__b44SentToken === storedTokenHeader();
+      if (rejectedTokenStillStored) forgetStoredToken();
+    });
+    return send.apply(this, arguments);
+  };
 })();
-$('rules').innerHTML=['Min. ₦50,000 for installments','First payment within 72 hours','Max. 2 items on installment','₦1,000 late-payment fee','Released after 100% payment'].map(t=>`<span class="rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-g-800 ring-1 ring-black/10">${t}</span>`).join('')+`<button onclick="show('terms','t5')" class="rounded-full bg-g-800 px-4 py-1.5 text-sm font-semibold text-white hover:bg-g-900">Read the full terms →</button>`;
-$('flogo').src=LOGO;
-
-/* Cookie pop-up */
-let ckv=null;try{ckv=localStorage.getItem('vv_cookie')}catch(e){}
-function cookieOpen(){const c=$('cky');c.className='show'}
-function cookie(v){const c=$('cky');try{localStorage.setItem('vv_cookie',v)}catch(e){}c.className='hid';setTimeout(()=>c.className='',380);if(v==='all')toast('Thanks! Cookies accepted.');else if(v==='essential')toast('Only essential cookies will be used.')}
-if(!ckv)setTimeout(cookieOpen,1500);
-
-/* Welcome pop-up with confetti */
-function welcome(n){const w=$('wel');clearTimeout(welcome.t);const E=['🎉','✨','🛒','❤️','⭐','🎁'];
- const conf=Array.from({length:16},(_,i)=>`<span class="pointer-events-none absolute left-7 top-7 text-lg" style="--x:${Math.round(rnd(-130,130))}px;--y:${Math.round(rnd(-90,120))}px;--r:${Math.round(rnd(-180,180))}deg;animation:burst 1.5s ${(i*.03).toFixed(2)}s ease-out forwards">${E[i%E.length]}</span>`).join('');
- w.innerHTML=`<div class="f1 glass relative flex items-center gap-3 rounded-2xl p-4 pr-6" style="background:rgba(255,255,255,.94)"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-g-800"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5" style="stroke-dasharray:30;stroke-dashoffset:30;animation:draw .6s .4s ease forwards"/></svg></span><div><p class="text-sm font-bold text-g-900">Welcome, ${esc(n)}!</p><p class="text-xs text-g-900/60">You're signed in. Happy shopping.</p></div></div>${conf}`;
- w.className='show';welcome.t=setTimeout(()=>{w.className='hid';setTimeout(()=>w.className='',420)},3600)}
-
-/* Floating everywhere */
-const EM=['🛒','🛍️','❤️','🎁','⭐','📦','🏷️','✨','💚','🧡'];
-function rnd(a,b){return a+Math.random()*(b-a)}
-(function(){
- $('bgf').innerHTML=Array.from({length:16},(_,i)=>`<span class="absolute select-none" style="left:${rnd(2,96).toFixed(0)}%;bottom:-10vh;font-size:${rnd(16,34).toFixed(0)}px;opacity:0;animation:rise ${rnd(16,32).toFixed(1)}s linear ${(-rnd(0,30)).toFixed(1)}s infinite">${EM[i%EM.length]}</span>`).join('');
- document.querySelectorAll('section.bg-g-900').forEach(s=>{const d=document.createElement('div');d.className='pointer-events-none absolute inset-0 overflow-hidden';
-  d.innerHTML=Array.from({length:9},(_,i)=>`<span class="f${1+i%3} absolute select-none" style="left:${rnd(2,94).toFixed(0)}%;top:${rnd(4,88).toFixed(0)}%;font-size:${rnd(18,34).toFixed(0)}px;opacity:.35;--fd:${rnd(4,8).toFixed(1)}s;--fo:${(-rnd(0,6)).toFixed(1)}s">${EM[(i*3)%EM.length]}</span>`).join('');s.insertAdjacentElement('afterbegin',d)})})();
-function floaty(){[['header img','fs'],['#trust>div','f1'],['#planlist>div','f2'],['#rules>span','f3'],['#grid>div','f1'],['#grid>div>div:first-child','f2'],['#dash .glass','f2'],['#dash .grid>div','f1'],['#labemoji','f2'],['#lab .scan','f1'],['#track .rounded-3xl','f1'],['section.bg-g-900 .hero-in a','f1']].forEach(([s,c])=>document.querySelectorAll(s).forEach((e,i)=>{if(/\bf[123]\b|\bfs\b/.test(e.className))return;e.classList.add(c);if(c!=='fs'){e.style.setProperty('--fd',(4.6+(i*.7)%3.4).toFixed(1)+'s');e.style.setProperty('--fo',(-((i*1.3)%5)).toFixed(1)+'s')}}))}
-
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll('#home h2,.rv,#trust>div').forEach((e,i)=>{e.classList.add('rv');e.style.transitionDelay=(i%4)*90+'ms';io.observe(e)});
-floaty();
-</script>
-</body>
+  </script>
+  <meta charset="utf-8"/>
+  <link href="https://media.base44.com/images/public/6ad1ccbe6503cfbecb151bf3/90c6d612b_valueville-mall-icon_3.svg" rel="icon" type="image/svg+xml"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <title>
+   Valuevillemall — Cart It, Love It
+  </title>
+  <meta content="Shop premium products at Valuevillemall and pay in full or spread it across 4 to 24 months. Every item is quality-tested on video before delivery, with live delivery tracking." name="description"/>
+  <meta content="#0A3D2E" name="theme-color"/>
+  <meta content="Valuevillemall — Cart It, Love It" property="og:title"/>
+  <meta content="Premium products, flexible installment plans from 4 to 24 months, tested on video before delivery." property="og:description"/>
+  <meta content="website" property="og:type"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <script crossorigin="" src="/assets/index-BEBn1CWC.js" type="module">
+  </script>
+  <link crossorigin="" href="/assets/index-gcmdY5QT.css" rel="stylesheet"/>
+  <script type="module">
+   if (window.self === window.top) {
+  let lastPath = "";
+  function getPageNameFromPath(path) {
+    const segments = path.split("/").filter(Boolean);
+    return segments[0] || null;
+  }
+  function trackPageView() {
+    const path = window.location.pathname;
+    if (path === lastPath) return;
+    lastPath = path;
+    const pageName = getPageNameFromPath(path) || "home";
+    const appId = "6ad1ccbe6503cfbecb151bf3";
+    if (!appId) return;
+    fetch(`/api/app-logs/${appId}/log-user-in-app/${pageName}`, {
+      method: "POST",
+    }).catch(() => {});
+  }
+  const originalPushState = history.pushState.bind(history);
+  history.pushState = function (...args) {
+    originalPushState(...args);
+    trackPageView();
+  };
+  const originalReplaceState = history.replaceState.bind(history);
+  history.replaceState = function (...args) {
+    originalReplaceState(...args);
+    trackPageView();
+  };
+  window.addEventListener("popstate", trackPageView);
+  trackPageView();
+}
+  </script>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+  <meta content="Valuevillemall" name="apple-mobile-web-app-title"/>
+  <script async="true" data-app-id="6ad1ccbe6503cfbecb151bf3" data-platform-url="https://app.base44.com" src="/static/js/badge.js">
+  </script>
+ </head>
+ <body>
+  <div id="root">
+  </div>
+ </body>
 </html>
